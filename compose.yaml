@@ -18,7 +18,7 @@ services:
       - "9100:9100"
     environment:
       CRAFT_SERVER_TOKEN: ${CRAFT_SERVER_TOKEN}
-      CRAFT_RPC_HOST: 0.0.0.0
+      CRAFT_RPC_HOST: 127.0.0.1
     volumes:
       - craft-agents-data:/home/craftagents/.craft-agent
 volumes:
