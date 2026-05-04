@@ -12,13 +12,14 @@ services:
       - WEBUI_NAME=Lifan's AI Chatbot
       - WEBUI_URL="${WEBUI_URL}"
   craft-agents:
-    image: ghcr.io/lukilabs/craft-agents-server:0.8.6
+    image: ghcr.io/lukilabs/craft-agents-server:0.9.0
     restart: unless-stopped
     ports:
       - "9100:9100"
     environment:
       CRAFT_SERVER_TOKEN: ${CRAFT_SERVER_TOKEN}
       CRAFT_RPC_HOST: 127.0.0.1
+      CRAFT_SERVER_URL: ${CRAFT_SERVER_URL}
     volumes:
       - craft-agents-data:/home/craftagents/.craft-agent
 volumes:
